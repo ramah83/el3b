@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect 4</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="game-container">
+        <h1 class="title">Connect 4</h1>
+        <p class="sub-title">
+            (You Use <strong>AI Algorithm:</strong> <span id="algo-name"></span>)
+        </p>
+
+        <div id="game">
+            <div id="turn-indicator">Current Turn: <span id="current-player">Red</span></div>
+
+            <select id="algorithm-select" style="display:none;">
+                <option value="minimax" {% if algorithm == 'minimax' %}selected{% endif %}>Minimax</option>
+                <option value="alphabeta" {% if algorithm == 'alphabeta' %}selected{% endif %}>Alpha-Beta pruning</option>
+            </select>
+
+            <div id="board"></div>
+            <button id="reset">Reset Game</button>
+        </div>
+    </div>
+
+    <div id="winner-popup" class="popup hidden">
+        <p id="winner-message">It's a draw!</p>
+        <div class="popup-buttons">
+            <button onclick="createBoard()" class="btn replay">Replay</button>
+            <a href="/" class="btn home">Home</a>
+        </div>
+    </div>
+
+    <script>
+        const defaultAlgorithm = "{{ algorithm }}";
+
+        function updateAlgoDisplay() {
+            const algoMap = {
+                minimax: "Minimax",
+                alphabeta: "Alpha-Beta Pruning"
+            };
+            const displayName = algoMap[defaultAlgorithm] || defaultAlgorithm;
+            document.getElementById('algo-name').innerText = displayName;
+        }
+
+        document.addEventListener('DOMContentLoaded', updateAlgoDisplay);
+    </script>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

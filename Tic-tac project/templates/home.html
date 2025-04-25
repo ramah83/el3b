@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <div id="homepage">
+        <h1>Welcome to Tic Tac Toe</h1>
+        <p>Select your AI settings before starting:</p>
+
+        <form action="{{ url_for('game') }}" method="get">
+            <label for="algo">Choose AI Algorithm:</label><br>
+            <select name="algo" id="algo">
+                <option value="minimax">Minimax</option>
+                <option value="alphabeta" selected>Alpha-Beta Pruning</option>
+            </select><br>
+
+            <button type="submit" class="btn">Start Game</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <h2>(You Use <strong>AI Algorithm:</strong> {{ algo }})</h2>
+
+    <div class="game-container">
+        <div class="board" id="board"></div>
+    </div>
+
+    <div class="game-status" id="status"></div>
+
+    <div class="result-popup" id="resultPopup" style="display: none;">
+        <h2 id="resultText">Player won the game!</h2>
+        <div class="popup-buttons">
+            <button onclick="replayGame()" class="replay">Replay</button>
+            <button onclick="goHome()" class="home">Home</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

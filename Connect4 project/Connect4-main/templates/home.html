@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect 4 - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <div id="homepage">
+        <h1>Welcome to Connect 4</h1>
+        <p>Select your AI settings before starting:</p>
+
+        <form action="{{ url_for('game') }}" method="get">
+            <label for="algorithm">Choose AI Algorithm:</label><br>
+            <select name="algorithm" id="algorithm">
+                <option value="minimax">Minimax</option>
+                <option value="alphabeta" selected>Alpha-Beta Pruning</option>
+            </select><br>
+
+            <button type="submit" class="btn">Start Game</button>
+        </form>
+    </div>
+</body>
+</html>

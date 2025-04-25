@@ -1,0 +1,118 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0d0d0d;
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #00c3ff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00c3ff, 0 0 20px #00c3ff;
+}
+
+h2 {
+    color: #bbb;
+    margin-bottom: 30px;
+}
+
+.game-container {
+    background-color: #1a1a1a;
+    border-radius: 30px;
+    padding: 30px;
+    width: fit-content;
+    margin: auto;
+    box-shadow: 0 0 20px #00c3ff;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: auto;
+}
+
+.cell {
+    background-color: #000;
+    border: 2px solid #666;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    color: white;
+    border-radius: 10px;
+}
+
+.cell:hover {
+    background-color: #1f1f1f;
+    transform: scale(1.05);
+}
+
+.cell.X {
+    color: #e74c3c;
+}
+
+.cell.O {
+    color: #3498db;
+}
+
+.game-status {
+    margin-top: 30px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00c3ff;
+    text-shadow: 0 0 5px #00c3ff;
+}
+
+.result-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1a1a1a;
+    border: 2px solid #00c3ff;
+    box-shadow: 0 0 30px #00c3ff;
+    padding: 30px;
+    border-radius: 20px;
+    width: fit-content;
+    text-align: center;
+    z-index: 1000;
+}
+
+.result-popup h2 {
+    font-size: 2rem;
+    color: #00c3ff;
+    margin-bottom: 20px;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.popup-buttons button {
+    padding: 10px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.popup-buttons .replay {
+    background-color: #00aaff;
+    color: white;
+}
+
+.popup-buttons .home {
+    background-color: #8e44ad;
+    color: white;
+}
