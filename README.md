@@ -58,7 +58,7 @@ Additional perks
 <br>
 
 ![Connect4 1](https://github.com/user-attachments/assets/b5bb93de-3611-4de8-b573-7a8d89928e22)  
-![Connect4 2](https://github.com/user-attachments/assets/769f29b1-b7be-4cfb-8cdd-292f92366a55)  
+![image](https://github.com/user-attachments/assets/2b7bb15f-9937-4629-b443-18073dd857a7)
 ![Connect4 3](https://github.com/user-attachments/assets/45cc2317-5d64-4f93-b621-96ae6e521b96)  
 ![Connect4 4](https://github.com/user-attachments/assets/74aa5651-a20a-45e0-ae9a-f252b8722a6a)  
 ![Connect4 5](https://github.com/user-attachments/assets/f1f55fe2-2d2f-4726-b7ed-ef378440559e)  
