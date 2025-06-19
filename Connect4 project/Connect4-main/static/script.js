@@ -2,7 +2,7 @@ const ROWS = 6;
 const COLUMNS = 7;
 let currentPlayer = 'red';
 let board = [];
-let vsAI = true;
+let vsAI = false;
 
 document.addEventListener('DOMContentLoaded', () => {
     createBoard();

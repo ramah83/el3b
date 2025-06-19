@@ -43,7 +43,7 @@ def ai_move():
     board = data['board']
     player = data['player']
     algorithm = data['algorithm']
-    depth = 4
+    depth = 4  # You can adjust this value based on the desired difficulty level and performance trade-offs.
 
     if algorithm == 'minimax':
         col, _ = minimax(board, depth, True, player)
